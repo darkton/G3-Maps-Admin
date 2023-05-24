@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "androidjs": "^2.0.6"
+  },
+  "scripts": {
+    "watch:css": "npx tailwindcss -i ./public_html/css/main-input.css -o ./public_html/css/main.css --watch"
+  }
+}

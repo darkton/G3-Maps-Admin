@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="h-full bg-white">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/main.css" rel="stylesheet">
+  <title>Buscar | G3Maps</title>
+</head>
+
+<body class="h-full">
+  <div class="flex min-h-full flex-col px-6 py-6 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm flex items-center">
+      <button id="back" class="p-2 rounded-full mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+        </svg>
+      </button>
+      <h3 class="text-left text-lg font-bold leading-9 tracking-tight text-gray-900">Buscar</h3>
+    </div>
+    <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div id="filter-form" class="flex-col space-y-3 rounded-lg border border-gray-900/25 px-3 py-3 mb-4">
+          <form class="space-y-2" >
+            <div>
+              <label for="olt" class="block text-sm font-medium leading-6 text-gray-900">OLT</label>
+              <div class="mt-1 relative">
+                <select id="olt" name="olt" required
+                  class="appearance-none px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6">
+                </select>
+                
+              </div>
+            </div>
+            <div>
+              <label for="route" class="block text-sm font-medium leading-6 text-gray-900">Rota</label>
+              <div class="mt-1 relative">
+                <select id="route" name="route" 
+                  class="appearance-none px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6">
+                  
+                </select>
+                
+              </div>
+            </div>
+            <div class="flex justify-between items-center space-x-2">
+              <div class="basis-1/2">
+                <label for="lat" class="block text-sm font-medium leading-6 text-gray-900">Cartão</label>
+                <div class="mt-1">
+                  <input id="card" name="card" type="number" 
+                    class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6">
+                </div>
+              </div>
+    
+              <div class="basis-1/2">
+                <label for="pon" class="block text-sm font-medium leading-6 text-gray-900">PON</label>
+                <div class="mt-1">
+                  <input id="pon" name="pon" type="number" 
+                    class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6">
+                </div>
+              </div>
+            </div>   
+            <div>
+              <label for="show" class="block text-sm font-medium leading-6 text-gray-900">Exibir</label>
+              <div class="mt-1 relative">
+                <select id="show" name="show" required
+                  class="appearance-none px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6">
+                  <option value="1">Todos</option>
+                  <option value="2">Apenas criado por mim</option>
+                </select>
+                
+              </div>
+            </div>
+            <div>
+              <button type="button" onclick="saveInputsToCookie()"
+                class="mt-4 flex w-full justify-center rounded-md bg-sky-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Aplicar</button>
+            </div>
+          </form>
+      </div>
+
+      <div id="cto-container">
+
+      </div>
+  </div>
+  <script src="./js/screen.search.js"></script>
+  <script src="./js/config.main.js"></script>
+  <script src="./js/auth/verify.js"></script>
+  <script src="./js/cookie_manager.js"></script>
+  <style>
+    #image-container img {
+      height: 0;
+      padding-bottom: 100%;
+    }
+  </style>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+var host_name = "https://g3maps.darkton.com.br";
